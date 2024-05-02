@@ -5,6 +5,9 @@ import 'package:udhavi/widgets/custom_app_bar.dart';
 import 'package:udhavi/widgets/text_form_fiels.dart';
 
 class RegisterScreen extends StatefulWidget {
+
+
+
   var number;
   RegisterScreen({super.key, this.number});
   @override
