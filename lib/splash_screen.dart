@@ -38,7 +38,6 @@ class _SplashScreenState extends State<SplashScreen> {
             SvgPicture.asset(AppImages.uImage),
             Text(
               'Udhavi',
-              // style: TextStyle(color: Colors.white, fontSize: 23),
               style: poppinsCustom.copyWith(color: Colors.white,fontSize: 20)
             ),
           ],
