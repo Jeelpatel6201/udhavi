@@ -35,7 +35,6 @@ class CustomTextFomField extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(radius10),
             borderSide: const BorderSide(
-              color: greyColor,
             ),
           ),
           border:
