@@ -63,6 +63,13 @@ class _OTPScreenState extends State<OTPScreen> {
             text: 'Submit',
             colors: 0xffFFFFFF,
             backColor: 0xffE73F3F,
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SelectCategoryScreen(),
+                  ));
+            },
           ),
           const SizedBox(
             height: 20,
@@ -72,13 +79,7 @@ class _OTPScreenState extends State<OTPScreen> {
             colors: 0xff000000,
             backColor: 0xffFFFFFF,
             border: Border.all(color: const Color(0xffE73F3F)),
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SelectCategoryScreen(),
-                  ));
-            },
+
           ),
         ],
       ),
