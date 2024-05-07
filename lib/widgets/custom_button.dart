@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:udhavi/constant/app_color.dart';
 import 'package:udhavi/constant/app_text_style.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
   String? text;
   Function()? onTap;
   int? colors;
@@ -17,22 +17,27 @@ class CustomButton extends StatelessWidget {
       this.border});
 
   @override
+  State<CustomButton> createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
+  @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onTap,
+      onTap: widget.onTap,
       child: Center(
         child: Container(
           height: 70,
           width: 330,
           decoration: BoxDecoration(
-            color: Color(backColor!),
+            color: Color(widget.backColor!),
             borderRadius: BorderRadius.circular(10),
-            border: border,
+            border: widget.border,
           ),
           child: Center(
-              child: Text("$text",
+              child: Text("${widget.text}",
                   style: poppinsStyle.copyWith(
-                    color: Color(colors!),
+                    color: Color(widget.colors!),
                   ))),
         ),
       ),

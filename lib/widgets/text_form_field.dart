@@ -4,19 +4,24 @@ import 'package:udhavi/constant/app_size.dart';
 import 'package:udhavi/constant/app_text_style.dart';
 
 class CustomTextFomField extends StatelessWidget {
-  CustomTextFomField(
-      {super.key,
-      this.controller,
-      this.labelText,
-      this.keyboardType,
-      this.initialValue,
-      this.enabled,});
+  CustomTextFomField({
+    super.key,
+    this.controller,
+    this.labelText,
+    this.keyboardType,
+    this.initialValue,
+    this.enabled,
+    this.prefixIcon,
+  });
 
   TextEditingController? controller;
   String? labelText;
   TextInputType? keyboardType;
   String? initialValue;
   bool? enabled;
+  Widget? prefixIcon;
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,6 +35,7 @@ class CustomTextFomField extends StatelessWidget {
         style: poppinsCustom.copyWith(
             fontWeight: FontWeight.w600, color: greyColor),
         decoration: InputDecoration(
+          prefixIcon: prefixIcon,
           contentPadding: const EdgeInsets.all(17),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(radius10),

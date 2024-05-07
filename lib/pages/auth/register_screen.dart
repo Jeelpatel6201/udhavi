@@ -4,7 +4,7 @@ import 'package:udhavi/constant/app_text_style.dart';
 import 'package:udhavi/pages/auth/otp_screen.dart';
 import 'package:udhavi/widgets/custom_app_bar.dart';
 import 'package:udhavi/widgets/custom_button.dart';
-import 'package:udhavi/widgets/text_form_fiels.dart';
+import 'package:udhavi/widgets/text_form_field.dart';
 
 class RegisterScreen extends StatefulWidget {
   var number;

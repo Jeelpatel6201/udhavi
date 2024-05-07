@@ -5,6 +5,7 @@ class AppImages{
   static const String introScreen = 'assest/IntroScreen.svg';
   static const String onBondingScreen = 'assest/onbonding.png';
   static const String onBondingScreen2 = 'assest/onbonding2.svg';
+  static const String calendar = 'assest/calender.svg';
 
 
 
