@@ -4,14 +4,13 @@ import 'package:udhavi/constant/app_size.dart';
 import 'package:udhavi/constant/app_text_style.dart';
 
 class CustomTextFomField extends StatelessWidget {
-  CustomTextFomField({
-    super.key,
-    this.controller,
-    this.labelText,
-    this.keyboardType,
-    this.initialValue,
-    this.enabled,
-  });
+  CustomTextFomField(
+      {super.key,
+      this.controller,
+      this.labelText,
+      this.keyboardType,
+      this.initialValue,
+      this.enabled,});
 
   TextEditingController? controller;
   String? labelText;
@@ -34,8 +33,6 @@ class CustomTextFomField extends StatelessWidget {
           contentPadding: const EdgeInsets.all(17),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(radius10),
-            borderSide: const BorderSide(
-            ),
           ),
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(radius10)),
