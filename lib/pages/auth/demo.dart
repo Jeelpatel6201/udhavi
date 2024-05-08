@@ -1,90 +1,53 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatefulWidget {
-  @override
-  _FirstPageState createState() => _FirstPageState();
-}
-
-class _FirstPageState extends State<FirstPage> {
-  final TextEditingController _controller = TextEditingController();
-  String _inputText = '';
-
+class ListsWithCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('First Page'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextFormField(
-              controller: _controller,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: 'Enter a number',
-              ),
-              onChanged: (value) {
-                setState(() {
-                  _inputText = value;
-                });
-              },
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondPage(number: _inputText),
-                  ),
-                );
-              },
-              child: Text('Go to Second Page'),
-            ),
-          ],
-        ),
-      ),
+    // Sample data for three lists
+    List<List<String>> listsData = [
+      ['Item 1', 'Item 2', 'Item 3'],
+      ['Item A', 'Item B', 'Item C', 'Item D'],
+      ['Item X', 'Item Y', 'Item Z'],
+      ['Item P', 'Item Q', 'Item R'],
+      ['Item M', 'Item N', 'Item O'],
+    ];
+
+    return ListView.builder(
+      itemCount: listsData.length,
+      itemBuilder: (context, index) {
+        return CardList(listData: listsData[index]);
+      },
     );
   }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
 }
 
-class SecondPage extends StatelessWidget {
-  final String number;
+class CardList extends StatelessWidget {
+  final List<String> listData;
 
-  SecondPage({required this.number});
+  CardList({required this.listData});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Number from First Page: $number'),
-            SizedBox(height: 20),
-            TextFormField(
-              initialValue: number,
-              enabled: false,
-              decoration: InputDecoration(
-                labelText: 'Automatically Generated Number',
-              ),
-            ),
-          ],
-        ),
+    return Card(
+      margin: EdgeInsets.all(10.0),
+      child: Column(
+        children: [
+          ListTile(
+            title: Text('List ${listData[0]}'),
+          ),
+          Divider(),
+          ListView.builder(
+            itemCount: listData.length,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text(listData[index]),
+              );
+            },
+          ),
+        ],
       ),
     );
   }

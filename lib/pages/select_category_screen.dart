@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:udhavi/constant/app_color.dart';
 import 'package:udhavi/constant/app_image.dart';
 import 'package:udhavi/constant/app_text_style.dart';
+import 'package:udhavi/pages/request_form_screen.dart';
 import 'package:udhavi/widgets/custom_app_bar.dart';
 import 'package:udhavi/widgets/custom_button.dart';
 
@@ -106,6 +107,14 @@ class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
             text: "Next",
             backColor: 0xffE73F3F,
             colors: 0xffFFFFFF,
+            onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const RequestFromScreen(),
+                  ),
+                );
+            },
           ),
         ],
       ),

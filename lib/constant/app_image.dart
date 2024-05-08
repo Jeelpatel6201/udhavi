@@ -5,7 +5,6 @@ class AppImages{
   static const String introScreen = 'assest/IntroScreen.svg';
   static const String onBondingScreen = 'assest/onbonding.png';
   static const String onBondingScreen2 = 'assest/onbonding2.svg';
-  static const String calendar = 'assest/calender.svg';
 
 
 
@@ -17,5 +16,6 @@ class AppImages{
   static const String  appointment = 'assest/appointment.png';
   static const String   femaleDoctor  = 'assest/female_doctor.png';
   static const String    standUp   = 'assest/stand_up.png';
-
+  static const String  calendar = 'assest/calendar.png';
+  static const String  blood = 'assest/blood.png';
 }

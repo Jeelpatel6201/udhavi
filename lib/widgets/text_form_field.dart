@@ -12,6 +12,9 @@ class CustomTextFomField extends StatelessWidget {
     this.initialValue,
     this.enabled,
     this.prefixIcon,
+    this.hintText,
+    this.hintStyle,
+    this.validator,
   });
 
   TextEditingController? controller;
@@ -20,6 +23,9 @@ class CustomTextFomField extends StatelessWidget {
   String? initialValue;
   bool? enabled;
   Widget? prefixIcon;
+  String? hintText;
+  TextStyle? hintStyle;
+  String? Function(String?)? validator;
 
 
   @override
@@ -47,7 +53,13 @@ class CustomTextFomField extends StatelessWidget {
             fontWeight: FontWeight.w900,
             color: Colors.black,
           ),
+          hintText: hintText,
+          hintStyle: poppinsCustom.copyWith(
+            fontWeight: FontWeight.w900,
+            color: Colors.grey,
+          ),
         ),
+        validator: validator,
       ),
     );
   }
