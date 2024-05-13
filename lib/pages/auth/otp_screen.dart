@@ -4,7 +4,6 @@ import 'package:otp_text_field/style.dart';
 import 'package:udhavi/constant/app_color.dart';
 import 'package:udhavi/constant/app_text_style.dart';
 import 'package:udhavi/pages/home_page.dart';
-import 'package:udhavi/pages/select_category_screen.dart';
 import 'package:udhavi/widgets/custom_app_bar.dart';
 import 'package:udhavi/widgets/custom_button.dart';
 

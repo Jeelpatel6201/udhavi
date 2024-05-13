@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Center(child: Image.asset(AppImages.loginScreen)),
             Padding(
-              padding: EdgeInsets.only(left: 20.0, top: 50),
+              padding: const EdgeInsets.only(left: 20.0, top: 50),
               child: Text(
                 "Enter your phone number",
                 style: poppinsStyle.copyWith(color: Colors.black),

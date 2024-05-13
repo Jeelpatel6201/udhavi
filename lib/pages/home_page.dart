@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:udhavi/constant/app_color.dart';
-import 'package:udhavi/constant/app_image.dart';
 import 'package:udhavi/constant/app_text_style.dart';
 import 'package:udhavi/pages/select_category_screen.dart';
-import 'package:udhavi/widgets/custom_button.dart';
 import 'package:udhavi/widgets/custom_card.dart';
 import 'package:udhavi/widgets/text_form_field.dart';
 
@@ -81,7 +78,6 @@ class _HomePageState extends State<HomePage> {
           const CustomCard(),
           const CustomCard(),
           const CustomCard(),
-
         ],
       ),
     );
